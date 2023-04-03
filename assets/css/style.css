@@ -1,0 +1,151 @@
+/* Define custom CSS variables for colors */
+:root {
+  --teal: #92CCCE;
+  --darkgray: #31343D;
+  --main-h2-blue: #466087;
+  --indent: 50px;
+  --main-section-h2: 36px;
+}
+
+/* Reset box-sizing, padding, and margin for all elements */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction:column;
+  font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  background-color: #EEEEF7;
+}
+
+/* Set the background color and flex properties for the header */
+header{
+  background-color: var(--darkgray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 12.5px;
+}
+
+/* Set the font size, background color, and padding for the h1 element */
+header h1 {
+  font-size: 48px;
+  color: var(--darkgray);
+  background-color: var(--teal);
+  width: fit-content; 
+  padding-left: 40px;
+  padding-right: 15px;
+}
+
+/* this code sets the ul children to flex mode */
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-right: 50px;
+}
+
+/* this code fine tunes the position of the li elements */
+header nav ul li {
+  margin: 20px 20px 5px 10px;
+}
+
+/* this code creates a custom underline text decoration by using border bottom combined with padding it also sets the color of the text and removes the normal anchor tag text decoration */
+nav li a {
+  color: var(--teal);
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: solid 4px var(--teal);
+}
+
+/* this code creates a section for our background image and positions the child element (the h2) within it to be on the bottom right */
+.cool-subtitle{
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  height: 150px;
+  width: 100%;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* this code provides background color, margin and padding for fine tuning of the position*/
+.cool-subtitle h2 {
+  color: var(--darkgray);
+  background-color: var(--teal);
+  margin-right: 90px;
+  margin-bottom: 12px;
+  padding: 6px;
+}
+
+main, footer {
+  display: flex;
+  justify-content: center;
+  color: var(--main-h2-blue);
+  margin-top: 25px;
+}
+
+.about{
+  display:flex;
+  height: 250px;
+}
+
+.about h2, footer h2{
+  font-size: var(--main-section-h2);
+  border-right: solid 3px var(--main-h2-blue);
+  width: fit-content;
+  padding-left: var(--indent);
+  padding-right: 10px;
+  padding-top: 15px;
+  text-align: right;
+  margin-top: 7.5px;
+}
+
+.about .two-paragraphs {
+  padding: 7.5px;
+}
+
+.about p {
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+}
+
+footer nav {
+  width: 100%;
+}
+
+footer nav ul{
+  height: 100%;
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+footer nav ul li {
+  
+  margin: 0 10px;
+  
+}
+
+footer nav ul li a {
+  color: var(--darkgray);
+  border-bottom: solid 4px var(--main-h2-blue);
+  font-size: 20px;
+}
+
+
+
