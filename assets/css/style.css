@@ -7,26 +7,26 @@
   --main-section-h2: 36px;
 }
 
-/* Reset box-sizing, padding, and margin for all elements */
+/* Reset box-sizing, padding, and margin for all elements (default styling) */
 * {
-  box-sizing: border-box;
+  
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+/* sets the font family and background color of the body element */
 body {
-  display: flex;
-  flex-direction:column;
-  font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  font-family: 'Roboto', Helvetica, sans-serif;
   background-color: #EEEEF7;
 }
 
 /* Set the background color and flex properties for the header */
-header{
+header {
   background-color: var(--darkgray);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
   padding-top: 25px;
   padding-bottom: 12.5px;
 }
@@ -36,7 +36,6 @@ header h1 {
   font-size: 48px;
   color: var(--darkgray);
   background-color: var(--teal);
-  width: fit-content; 
   padding-left: 40px;
   padding-right: 15px;
 }
@@ -51,23 +50,31 @@ header nav ul {
 
 /* this code fine tunes the position of the li elements */
 header nav ul li {
-  margin: 20px 20px 5px 10px;
+  margin: 20px 7px 0px 0px;
 }
 
 /* this code creates a custom underline text decoration by using border bottom combined with padding it also sets the color of the text and removes the normal anchor tag text decoration */
 nav li a {
   color: var(--teal);
+  font-size: 24px;
   text-decoration: none;
   padding-left: 5px;
   padding-right: 5px;
   border-bottom: solid 4px var(--teal);
 }
 
+/* adds hover styling to our anchor elements */
+header nav ul li a:hover {
+  background: var(--teal);
+  color: var(--darkgray);
+  border-radius: 10px;
+}
+
 /* this code creates a section for our background image and positions the child element (the h2) within it to be on the bottom right */
-.cool-subtitle{
+.cool-subtitle {
   display: flex;
   justify-content: flex-end;
-  align-items: end;
+  align-items: flex-end;
   height: 150px;
   width: 100%;
   background-image: url("../images/background.png");
@@ -84,68 +91,84 @@ nav li a {
   padding: 6px;
 }
 
-main, footer {
-  display: flex;
-  justify-content: center;
+main {
   color: var(--main-h2-blue);
-  margin-top: 25px;
 }
 
-.about{
-  display:flex;
-  height: 250px;
-}
 
-.about h2, footer h2{
-  font-size: var(--main-section-h2);
-  border-right: solid 3px var(--main-h2-blue);
-  width: fit-content;
-  padding-left: var(--indent);
-  padding-right: 10px;
-  padding-top: 15px;
+/* utility class styling start */
+main h2 {
+  font-size: 28px;
   text-align: right;
-  margin-top: 7.5px;
+  border-right: 5px solid var(--main-h2-blue);
+  width: 10%;
+  padding-right: 10px;
 }
 
-.about .two-paragraphs {
-  padding: 7.5px;
+
+.about {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 40px;
+  width: 90%;
+
 }
 
 .about p {
-  padding: 10px;
-  margin: 10px;
   font-size: 20px;
+  padding: 5px 10px;
+  margin: 5px;
 }
 
-footer {
+.work-container {
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 0px;
+  margin: 10px 0px;
 }
 
-footer nav {
-  width: 100%;
+.work {
+  
 }
 
-footer nav ul{
-  height: 100%;
-  width:100%;
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; /* Adjust this value as desired for the gap between cards */
+  padding: 20px;
+  margin: 10px 10px;
+  width: 85%;
+}
+
+.card {
+  background-color: aqua;
+  height: 100px;
+}
+
+.contact {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+.contact-info nav ul {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 
-footer nav ul li {
-  
-  margin: 0 10px;
-  
+.contact-info li {
+  margin: 25px;
 }
 
-footer nav ul li a {
+.contact-info a {
   color: var(--darkgray);
   border-bottom: solid 4px var(--main-h2-blue);
-  font-size: 20px;
 }
-
-
-
