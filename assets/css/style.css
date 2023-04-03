@@ -129,24 +129,43 @@ main h2 {
   margin: 10px 0px;
 }
 
-.work {
-  
-}
-
-
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px; /* Adjust this value as desired for the gap between cards */
+  grid-gap: 20px; 
   padding: 20px;
   margin: 10px 10px;
   width: 85%;
 }
 
+.card-container .card:first-child {
+  grid-column: 1 / 3; /* This makes the card span both columns */
+  height: 400px; /* Increase the height as desired */
+}
+
 .card {
-  background-color: aqua;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border: solid 7px var(--teal);
   height: 100px;
+}
+
+.card-label {
+  background-color: var(--teal);
+  width: 200px;
+  height: fit-content;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-label h3 {
+  font-size: 25px;
+}
+
+.card-label span {
+  font-size: 15px;
 }
 
 .contact {
@@ -157,18 +176,61 @@ main h2 {
   margin: 10px 0px;
 }
 
-.contact-info nav ul {
+.contact nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
+  margin-right: 100px;
 }
 
-.contact-info li {
+.contact li {
   margin: 25px;
 }
 
-.contact-info a {
+.contact a {
   color: var(--darkgray);
   border-bottom: solid 4px var(--main-h2-blue);
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkgray);
+  color: var(--teal);
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+#surf-report{
+  background-image: url("../images/surf-report.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#led-wall{
+  background-image: url("../images/led-wall.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#calculator{
+  background-image: url("../images/calculator.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#pastel-puzzels{
+  background-image: url("../images/pastel-puzzles.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#run-buddy{
+  background-image: url("../images/run-buddy.png");
+  background-size: cover;
+  background-position: center;
 }
