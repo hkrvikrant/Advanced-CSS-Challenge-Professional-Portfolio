@@ -1,0 +1,236 @@
+/* Define custom CSS variables for colors */
+:root {
+  --teal: #92CCCE;
+  --darkgray: #31343D;
+  --main-h2-blue: #466087;
+  --indent: 50px;
+  --main-section-h2: 36px;
+}
+
+/* Reset box-sizing, padding, and margin for all elements (default styling) */
+* {
+  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* sets the font family and background color of the body element */
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  background-color: #EEEEF7;
+}
+
+/* Set the background color and flex properties for the header */
+header {
+  background-color: var(--darkgray);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 12.5px;
+}
+
+/* Set the font size, background color, and padding for the h1 element */
+header h1 {
+  font-size: 48px;
+  color: var(--darkgray);
+  background-color: var(--teal);
+  padding-left: 40px;
+  padding-right: 15px;
+}
+
+/* this code sets the ul children to flex mode */
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-right: 50px;
+}
+
+/* this code fine tunes the position of the li elements */
+header nav ul li {
+  margin: 20px 7px 0px 0px;
+}
+
+/* this code creates a custom underline text decoration by using border bottom combined with padding it also sets the color of the text and removes the normal anchor tag text decoration */
+nav li a {
+  color: var(--teal);
+  font-size: 24px;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: solid 4px var(--teal);
+}
+
+/* adds hover styling to our anchor elements */
+header nav ul li a:hover {
+  background: var(--teal);
+  color: var(--darkgray);
+  border-radius: 10px;
+}
+
+/* this code creates a section for our background image and positions the child element (the h2) within it to be on the bottom right */
+.cool-subtitle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 150px;
+  width: 100%;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* this code provides background color, margin and padding for fine tuning of the position*/
+.cool-subtitle h2 {
+  color: var(--darkgray);
+  background-color: var(--teal);
+  margin-right: 90px;
+  margin-bottom: 12px;
+  padding: 6px;
+}
+
+main {
+  color: var(--main-h2-blue);
+}
+
+
+/* utility class styling start */
+main h2 {
+  font-size: 28px;
+  text-align: right;
+  border-right: 5px solid var(--main-h2-blue);
+  width: 10%;
+  padding-right: 10px;
+}
+
+
+.about {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 40px;
+  width: 90%;
+
+}
+
+.about p {
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; 
+  padding: 20px;
+  margin: 10px 10px;
+  width: 85%;
+}
+
+.card-container .card:first-child {
+  grid-column: 1 / 3; /* This makes the card span both columns */
+  height: 400px; /* Increase the height as desired */
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border: solid 7px var(--teal);
+  height: 100px;
+}
+
+.card-label {
+  background-color: var(--teal);
+  width: 200px;
+  height: fit-content;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-label h3 {
+  font-size: 25px;
+}
+
+.card-label span {
+  font-size: 15px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+.contact nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin-right: 100px;
+}
+
+.contact li {
+  margin: 25px;
+}
+
+.contact a {
+  color: var(--darkgray);
+  border-bottom: solid 4px var(--main-h2-blue);
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkgray);
+  color: var(--teal);
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+#surf-report{
+  background-image: url("../images/surf-report.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#led-wall{
+  background-image: url("../images/led-wall.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#calculator{
+  background-image: url("../images/calculator.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#pastel-puzzels{
+  background-image: url("../images/pastel-puzzles.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#run-buddy{
+  background-image: url("../images/run-buddy.png");
+  background-size: cover;
+  background-position: center;
+}
